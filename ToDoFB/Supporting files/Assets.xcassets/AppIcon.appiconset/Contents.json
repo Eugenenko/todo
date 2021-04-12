@@ -31,11 +31,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "120point.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "180point.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -89,6 +91,16 @@
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
     }
   ],
   "info" : {
