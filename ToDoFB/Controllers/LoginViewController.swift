@@ -47,6 +47,8 @@ class LoginViewController: UIViewController {
         }) { [weak self] complete in
             self?.warnLabel.alpha = 0
         }
+        
+        
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
