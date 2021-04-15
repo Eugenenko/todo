@@ -28,17 +28,17 @@ class secondTest: XCTestCase {
         }
     }
     
-    func getJSONDict(fileName: String) ->  [[String: String]]  {
+    func getJSONDict(fileName: String) ->  [String: String]  {
         guard let jsonData = readFile(fileName: fileName, fileType: "json") else {
-            return []
+            return [:]
         }
         do {
-            return try JSONDecoder().decode([[String: String]] .self, from: jsonData)
+            return try JSONDecoder().decode([String: String].self, from: jsonData)
         }
         catch {
             let jsonString = String(data: jsonData, encoding: .utf8)
             XCTFail("Bad JSON error: \(error) content:\n" + (jsonString ?? "nil"))
-            return []
+            return [:]
         }
     }
     
@@ -84,6 +84,8 @@ class secondTest: XCTestCase {
     func testLogin() throws {
         let a = getJSONDict(fileName: "loginsTest")
         print(a)
+        
+        
         
         app.launch()
         let emailTextField = app.windows.scrollViews.textFields["Email"].firstMatch
