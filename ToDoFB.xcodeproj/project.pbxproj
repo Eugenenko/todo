@@ -12,6 +12,9 @@
 		C9142EDA26205609000A4E4F /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9142ED926205609000A4E4F /* People.swift */; };
 		C9142EFB262072B2000A4E4F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C9142EFA262072B2000A4E4F /* .gitignore */; };
 		C92F5C57262456B2006B5963 /* firtsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F5C56262456B2006B5963 /* firtsTest.swift */; };
+		C92F5C5E262613BA006B5963 /* logins.json in Resources */ = {isa = PBXBuildFile; fileRef = C92F5C5D262613BA006B5963 /* logins.json */; };
+		C92F5C66262859EE006B5963 /* loginsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = C92F5C65262859EE006B5963 /* loginsTest.json */; };
+		C92F5C6E26285E9F006B5963 /* secondTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F5C6D26285E9F006B5963 /* secondTest.swift */; };
 		C9E6128F261DF88C0041525B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6128E261DF88C0041525B /* AppDelegate.swift */; };
 		C9E61291261DF88C0041525B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E61290261DF88C0041525B /* SceneDelegate.swift */; };
 		C9E61293261DF88C0041525B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E61292261DF88C0041525B /* LoginViewController.swift */; };
@@ -57,6 +60,9 @@
 		C9142ED926205609000A4E4F /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		C9142EFA262072B2000A4E4F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C92F5C56262456B2006B5963 /* firtsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firtsTest.swift; sourceTree = "<group>"; };
+		C92F5C5D262613BA006B5963 /* logins.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logins.json; sourceTree = "<group>"; };
+		C92F5C65262859EE006B5963 /* loginsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginsTest.json; sourceTree = "<group>"; };
+		C92F5C6D26285E9F006B5963 /* secondTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondTest.swift; sourceTree = "<group>"; };
 		C9E6128B261DF88C0041525B /* ToDoFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E6128E261DF88C0041525B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E61290261DF88C0041525B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,9 +189,12 @@
 		C9E612AF261DF8900041525B /* ToDoFBUITests */ = {
 			isa = PBXGroup;
 			children = (
+				C92F5C5D262613BA006B5963 /* logins.json */,
+				C92F5C65262859EE006B5963 /* loginsTest.json */,
 				C9E612B0261DF8900041525B /* ToDoFBUITests.swift */,
 				C9E612B2261DF8900041525B /* Info.plist */,
 				C92F5C56262456B2006B5963 /* firtsTest.swift */,
+				C92F5C6D26285E9F006B5963 /* secondTest.swift */,
 			);
 			path = ToDoFBUITests;
 			sourceTree = "<group>";
@@ -340,7 +349,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92F5C66262859EE006B5963 /* loginsTest.json in Resources */,
 				C9E612DA261F1A6B0041525B /* GoogleService-Info.plist in Resources */,
+				C92F5C5E262613BA006B5963 /* logins.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +488,7 @@
 			files = (
 				C92F5C57262456B2006B5963 /* firtsTest.swift in Sources */,
 				C9E612B1261DF8900041525B /* ToDoFBUITests.swift in Sources */,
+				C92F5C6E26285E9F006B5963 /* secondTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

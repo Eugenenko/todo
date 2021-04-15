@@ -1,21 +1,15 @@
 //
-//  firtsTest.swift
+//  secondTest.swift
 //  ToDoFBUITests
 //
-//  Created by Eugene Tkachenko on 12.04.2021.
+//  Created by Eugene Tkachenko on 15.04.2021.
 //
 
 import XCTest
 import Foundation
 
-struct Cred {
-    let name: String
-    let age: Int
-}
-
-class firtsTest: XCTestCase {
+class secondTest: XCTestCase {
     var app: XCUIApplication!
-    
     
     func readFile(fileName: String, fileType: String) -> Data? {
         let bundle = Bundle(for: firtsTest.self)
@@ -34,20 +28,37 @@ class firtsTest: XCTestCase {
         }
     }
     
-    func getJSONDict(fileName: String) ->  [String: [[String: String]]]  {
+    func getJSONDict(fileName: String) ->  [[String: String]]  {
         guard let jsonData = readFile(fileName: fileName, fileType: "json") else {
-            return [:]
+            return []
         }
         do {
-            return try JSONDecoder().decode([String: [[String: String]]] .self, from: jsonData)
+            return try JSONDecoder().decode([[String: String]] .self, from: jsonData)
         }
         catch {
             let jsonString = String(data: jsonData, encoding: .utf8)
             XCTFail("Bad JSON error: \(error) content:\n" + (jsonString ?? "nil"))
-            return [:]
+            return []
         }
     }
+    
+//    func testJSONMapping() throws {
+//            let bundle = Bundle(for: type(of: self))
+//
+//            guard let url = bundle.url(forResource: "User", withExtension: "json") else {
+//                XCTFail("Missing file: User.json")
+//                return
+//            }
+//
+//            let json = try Data(contentsOf: url)
+//            let user: Cred = try unbox(data: json)
+
+//            XCTAssertEqual(user.name, "John")
+//            XCTAssertEqual(user.age, 29)
         
+    
+    
+    
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -71,7 +82,7 @@ class firtsTest: XCTestCase {
     }
 
     func testLogin() throws {
-        let a = getJSONDict(fileName: "logins")
+        let a = getJSONDict(fileName: "loginsTest")
         print(a)
         
         app.launch()
@@ -85,8 +96,7 @@ class firtsTest: XCTestCase {
         passwordTextField.tap()
         passwordTextField.typeText("R1e2d3l4")
         loginButton.tap()
-        
-//        loginButton
+    
         let addTaskButton = app.windows.navigationBars["Tasks"].buttons["Add"].firstMatch
         XCTAssertTrue(addTaskButton.waitForExistence(timeout: 30), "Add button doesn't appear")
 //        XCTAssertFalse(addTaskButton.waitForExistence(timeout: 30), "Add button appears")
